@@ -1,0 +1,30 @@
+﻿<Page x:Class="AlgorithmsLaba2.View.DragonCurveFractalPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AlgorithmsLaba2.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="900" d:DesignWidth="1800"
+      Title="DragonCurveFractalPage">
+
+    <Grid Background="#FFE5FFFF">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Orientation="Vertical" Background="DarkSlateGray">
+            <Rectangle Fill="Transparent" Height="40"/>
+            <Button x:Name="btnStart" Click="btnStart_Click" Height="100" Content="Старт" FontFamily="Segoe UI" FontSize="40" Width="180" Background="#FFE5FFFF" Foreground="DarkSlateGray"/>
+            <Rectangle Fill="Transparent" Height="40"/>
+            <TextBlock x:Name="tbLabel" Height="100" Background="#FFE5FFFF" Width="180" Foreground="DarkSlateGray" TextAlignment="Center" FontSize="20"/>
+            <Rectangle Fill="Transparent" Height="40"/>
+            <Button x:Name="back" Content="Назад" Click="but_ClickBack" Height="100" FontSize="40" Width="180" Background="#FFE5FFFF" Foreground="DarkSlateGray"/>
+            <Label Content="Введите глубину" Height="40" FontSize="25" Foreground="#FFE5FFFF"/>
+            <TextBox x:Name="inputRings" Height="100" FontSize="40" Background="#FFE5FFFF" Width="180" TextAlignment="Center" Foreground="DarkSlateGray" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Rectangle Fill="Transparent" Height="40"/>
+            <Button x:Name="btnExit" Click="btnExit_Click" Height="100" Content="Выход" FontFamily="Segoe UI" FontSize="40" Width="180" Background="#FFE5FFFF" Foreground="DarkSlateGray"/>
+        </StackPanel>
+        <Canvas Grid.Column="1" x:Name="canvas" Background="#FFE5FFFF" Height="900" Width="1600"/>
+    </Grid>
+</Page>
